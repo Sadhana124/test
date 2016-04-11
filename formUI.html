@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test Form</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <script src="knockout-3.4.0.js" type="text/javascript"></script>
+    <script src="jquery-1.12.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Query.js"></script>
+    <script type="text/javascript" src="handleForm.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div action="http://127.0.0.1:3000/myaction" method="post">
+
+        <!--
+
+        <div class="form-group">
+            <label for="firstNameField">First name</label>
+            <input type="text" class="form-control" id="firstNameField" data-bind="value: firstName" placeholder="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastNameField">First name</label>
+            <input type="text" class="form-control" id="lastNameField" data-bind="value: lastName" placeholder="lastName">
+        </div>
+        <div>
+            <label data-bind="text:fullName"></label>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+
+        -->
+
+
+        <!-- correct form starts here -->
+        <div class = "row form-group">
+        <div class="col-xs-6">
+            <label for="from">From:</label>
+            <input type="text" class="form-control" id="from" data-bind="value: fromTime">
+        </div>
+        <div class="col-xs-6">
+            <label for="to">To:</label>
+            <input type="text" class="form-control" id="to" data-bind="value: toTime">
+        </div>
+        </div>
+
+        <div class="form-group">
+            <label for="attrSelect">Select fields to be displayed:</label>
+            <select class="form-control" id="attrSelect" data-bind="options: availableAttributes, selectedOptions: chosenAttributes"
+                    multiple="true"></select>
+        </div>
+
+        <div class="form-group row">
+
+            <div class = "col-xs-4">
+            <label for="condAttrSelect">Select where attribute:</label>
+            <select class="form-control" id="condAttrSelect" data-bind="options: availableAttributes"></select>
+            </div>
+
+            <div class = "col-xs-4">
+            <label for="condSelect">Select conditon for the selected where attribute:</label>
+            <select class="form-control" id="condSelect" data-bind="options: conditions"></select>
+            </div>
+
+            <div class = "col-xs-4">
+            <label for="condValue">Value for the condition attribute:</label>
+            <input type="text" class="form-control" id="condValue" data-bind="value: toTime">
+            </div>
+
+        </div>
+
+        <!-- <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown
+                <span class="caret"></span>
+            </button>
+            <div aria-labelledby="dropdownMenu1" class="dropdown-menu">
+            <select data-bind="options: availableAttributes, selectedOptions: chosenAttributes"
+                    multiple="true" ></select>
+            </div>
+        </div> -->
+    <!--First name:<br>
+    <input data-bind="value: firstName" /><br>
+    Last name:<br>
+    <input data-bind="value: lastName" />
+    <input type="submit" value="Submit"> -->
+    </form>
+</div>
+<!--<p>First name: <input data-bind="value: firstName" /></p>
+<p>Last name: <input data-bind="value: lastName" /></p>
+<h2>Hello, <span data-bind="text: fullName"> </span>!</h2> -->
+</body>
+</html>
